@@ -9,6 +9,10 @@
       href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
     <style>
       html {
         scroll-behavior: smooth;
@@ -49,7 +53,7 @@
         );
       }
       .glass-effect {
-        background: rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.3);
         backdrop-filter: blur(10px);
         border: 1px solid rgba(255, 255, 255, 0.3);
       }
@@ -64,35 +68,37 @@
   </head>
   <body class="gradient-bg min-h-screen">
     <!-- Header -->
-    <header class="px-6 py-4 glass-effect">
+    <header class="px-6 w-full bg-[rgb(180,161,163)]">
       <nav class="max-w-7xl mx-auto flex justify-between items-center">
         <div class="flex items-center space-x-3">
-          <div class="w-44 h-44 flex items-center justify-center">
+          <div
+            class="w-48 h-48 md:w-64 md:h-64 flex ml-15 items-center justify-center"
+          >
             <img src="assets/images/logo.png" alt="" />
-          </div>
-          <div>
-            <p class="text-xs text-gray-500">Handmade with Love</p>
+            <p class="text-sm text-[rgb(97,73,69)] whitespace-nowrap pr-6">
+              Handmade with Love 🤍
+            </p>
           </div>
         </div>
-        <div class="hidden md:flex space-x-8">
+        <div class="hidden md:ml-25 md:flex md:space-x-2 lg:space-x-15">
           <a
             href="#home"
-            class="text-lg text-green-900 hover:text-pink-600 transition-colors"
+            class="text-xl text-[rgb(97,73,69)] hover:text-[rgb(254,204,216)] transition-colors"
             >Home</a
           >
           <a
             href="#products"
-            class="text-lg text-green-900 hover:text-pink-600 transition-colors"
+            class="text-xl text-[rgb(97,73,69)] hover:text-[rgb(254,204,216)] transition-colors"
             >Products</a
           >
           <a
             href="#about"
-            class="text-lg text-green-900 hover:text-pink-600 transition-colors"
+            class="text-xl text-[rgb(97,73,69)] hover:text-[rgb(254,204,216)] transition-colors"
             >About</a
           >
           <a
             href="#contact"
-            class="text-lg text-green-900 hover:text-pink-600 transition-colors"
+            class="text-xl text-[rgb(97,73,69)] hover:text-[rgb(254,204,216)] transition-colors"
             >Contact</a
           >
         </div>
@@ -113,14 +119,14 @@
           class="font-script text-6xl md:text-8xl text-gray-800 mb-4 leading-tight"
         ></h1>
         <p
-          class="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed"
+          class="text-lg md:text-2xl text-[rgb(180,161,163)] mb-8 max-w-2xl mx-auto leading-relaxed"
         >
-          Handcrafted keychains, crocheted roses, and beautiful accessories made
+          Handcrafted keychains, crocheted roses, and beautiful gift & accessories made
           with love and attention to detail
         </p>
         <button
           onclick="scrollToProducts()"
-          class="bg-green-900 text-white px-8 py-4 rounded-full text-lg font-medium hover:from-pink-600 hover:to-purple-600 transition-all transform hover:scale-105 shadow-lg"
+          class="bg-[rgb(180,161,163)] text-white px-8 py-4 rounded-full text-lg font-medium hover:from-pink-600 hover:to-purple-600 transition-all transform hover:scale-105 shadow-lg"
         >
           Explore Our Crafts
         </button>
@@ -131,10 +137,10 @@
     <section id="products" class="px-6 py-20">
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-16">
-          <h2 class="font-script text-5xl text-gray-800 mb-4">
+          <h2 class="font-script text-5xl text-[rgb(97,73,69)] mb-4">
             Our Handmade Collection
           </h2>
-          <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+          <p class="text-[rgb(180,161,163)] text-lg max-w-2xl mx-auto">
             Each piece is carefully crafted with premium materials and lots of
             love
           </p>
@@ -147,22 +153,26 @@
             onclick="openCustomizer('keychain')"
           >
             <div
-              class="w-20 h-20 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl mx-auto mb-6 flex items-center justify-center"
+              class="w-20 h-20 mx-auto mb-6 flex items-center justify-center"
             >
-              <span class="text-3xl">🗝️</span>
+              <img class="rounded-2xl" src="assets/images/icon3.png"/>
             </div>
-            <h3 class="font-script text-3xl text-gray-800 mb-4 text-center">
+            <h3
+              class="font-script text-3xl text-[rgb(97,73,69)] mb-4 text-center"
+            >
               Keychains
             </h3>
-            <p class="text-gray-600 text-center mb-6 leading-relaxed">
+            <p class="text-[rgb(180,161,163)] text-center mb-6 leading-relaxed">
               Custom keychains with personalized designs, names, and colors.
               Perfect for gifts or personal use.
             </p>
             <div class="text-center">
-              <span class="text-2xl font-bold text-pink-600"
-                >Starting at $8</span
+              <span class="text-2xl font-bold text-[rgb(126,123,97)]"
+                >Starting at 15 QR</span
               >
-              <p class="text-sm text-gray-500 mt-1">Customize your design</p>
+              <p class="text-sm text-[rgb(97,73,69)] mt-1">
+                Customize your design ✨
+              </p>
             </div>
           </div>
 
@@ -172,22 +182,26 @@
             onclick="openCustomizer('crochet')"
           >
             <div
-              class="w-20 h-20 bg-gradient-to-br from-green-400 to-teal-500 rounded-2xl mx-auto mb-6 flex items-center justify-center"
+              class="w-20 h-20 mx-auto mb-6 flex items-center justify-center"
             >
-              <span class="text-3xl">🧶</span>
+              <img class="rounded-2xl" src="assets/images/icon1.jpg"/>
             </div>
-            <h3 class="font-script text-3xl text-gray-800 mb-4 text-center">
+            <h3
+              class="font-script text-3xl text-[rgb(97,73,69)] mb-4 text-center"
+            >
               Crochet Items
             </h3>
-            <p class="text-gray-600 text-center mb-6 leading-relaxed">
+            <p class="text-[rgb(180,161,163)] text-center mb-6 leading-relaxed">
               Beautiful crocheted accessories including bags, coasters, and
               decorative items made with premium yarn.
             </p>
             <div class="text-center">
-              <span class="text-2xl font-bold text-pink-600"
-                >Starting at $12</span
+              <span class="text-2xl font-bold text-[rgb(126,123,97)]"
+                >Starting at 20 QR</span
               >
-              <p class="text-sm text-gray-500 mt-1">Choose your style</p>
+              <p class="text-sm text-[rgb(97,73,69)] mt-1">
+                Customize your design ✨
+              </p>
             </div>
           </div>
 
@@ -197,22 +211,26 @@
             onclick="openCustomizer('roses')"
           >
             <div
-              class="w-20 h-20 bg-gradient-to-br from-pink-400 to-rose-500 rounded-2xl mx-auto mb-6 flex items-center justify-center"
+              class="w-20 h-20 mx-auto mb-6 flex items-center justify-center"
             >
-              <span class="text-3xl">🌹</span>
+              <img class="rounded-2xl" src="assets/images/icon2.png"/>
             </div>
-            <h3 class="font-script text-3xl text-gray-800 mb-4 text-center">
+            <h3
+              class="font-script text-3xl text-[rgb(97,73,69)] mb-4 text-center"
+            >
               Crocheted Roses
             </h3>
-            <p class="text-gray-600 text-center mb-6 leading-relaxed">
+            <p class="text-[rgb(180,161,163)] text-center mb-6 leading-relaxed">
               Elegant crocheted roses that last forever. Perfect for bouquets,
               decorations, or romantic gifts.
             </p>
             <div class="text-center">
-              <span class="text-2xl font-bold text-pink-600"
-                >Starting at $15</span
+              <span class="text-2xl font-bold text-[rgb(126,123,97)]"
+                >Starting at 30 QR</span
               >
-              <p class="text-sm text-gray-500 mt-1">Single or bouquets</p>
+              <p class="text-sm text-[rgb(97,73,69)] mt-1">
+                Customize your design ✨
+              </p>
             </div>
           </div>
         </div>
@@ -222,21 +240,21 @@
     <!-- About Section -->
     <section id="about" class="px-6 py-20">
       <div class="max-w-4xl mx-auto text-center">
-        <h2 class="font-script text-5xl text-gray-800 mb-8">
+        <h2 class="font-script text-5xl text-[rgb(97,73,69)] mb-8">
           About Charmé Lotus
         </h2>
         <div class="glass-effect rounded-3xl p-8 md:p-12">
-          <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          <p class="text-lg text-[rgb(180,161,163)] leading-relaxed mb-6">
             Welcome to Charmé Lotus, where every piece tells a story of passion
             and craftsmanship. We specialize in creating beautiful, handmade
             accessories that bring joy and personality to your everyday life.
           </p>
-          <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          <p class="text-lg text-[rgb(180,161,163)] leading-relaxed mb-6">
             Each keychain, crochet item, and rose is carefully crafted using
             premium materials and traditional techniques, ensuring that every
             piece is unique and built to last.
           </p>
-          <p class="text-lg text-gray-700 leading-relaxed">
+          <p class="text-lg text-[rgb(180,161,163)] leading-relaxed">
             We believe that handmade items carry a special energy and love that
             mass-produced products simply cannot match. Thank you for supporting
             small business and choosing handmade.
@@ -248,9 +266,11 @@
     <!-- Contact Section -->
     <section id="contact" class="px-6 py-20">
       <div class="max-w-4xl mx-auto text-center">
-        <h2 class="font-script text-5xl text-gray-800 mb-8">Get in Touch</h2>
+        <h2 class="font-script text-5xl text-[rgb(97,73,69)] mb-8">
+          Get in Touch
+        </h2>
         <div class="glass-effect rounded-3xl p-8 md:p-12">
-          <p class="text-lg text-gray-700 mb-8">
+          <p class="text-lg text-[rgb(180,161,163)] mb-8">
             Ready to order your custom piece? Send us a message on Instagram
             with your requirements!
           </p>
@@ -259,10 +279,10 @@
             target="_blank"
             class="inline-flex items-center bg-gradient-to-r from-pink-500 to-purple-500 text-white px-8 py-4 rounded-full text-lg font-medium hover:from-pink-600 hover:to-purple-600 transition-all transform hover:scale-105 shadow-lg"
           >
-            <span class="mr-3">📱</span>
+            <i class="fab fa-instagram text-2xl pr-3"></i>
             Follow us on Instagram
           </a>
-          <p class="text-sm text-gray-500 mt-4">@charmelotus</p>
+          <p class="text-sm text-gray-500 mt-4">@charmeelotus</p>
         </div>
       </div>
     </section>
@@ -279,7 +299,7 @@
     <!-- Customizer Modal -->
     <div
       id="customizerModal"
-      class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4"
+      class="fixed inset-0 bg-black/50 hidden z-50 flex overflow-y-auto items-center justify-center p-4"
     >
       <div
         class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
