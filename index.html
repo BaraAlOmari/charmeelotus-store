@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Charmé Lotus - Handmade with Love</title>
+    <link href="./css/output.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .floating {
+        animation: floating 3s ease-in-out infinite;
+      }
+      @keyframes floating {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+      .fade-in {
+        animation: fadeIn 1s ease-in-out;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .gradient-bg {
+        background: linear-gradient(
+          135deg,
+          #fdf2f8 0%,
+          #fce7f3 50%,
+          #f3e8ff 100%
+        );
+      }
+      .glass-effect {
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+      .product-hover {
+        transition: all 0.3s ease;
+      }
+      .product-hover:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body class="gradient-bg min-h-screen">
+    <!-- Header -->
+    <header class="px-6 py-4 glass-effect">
+      <nav class="max-w-7xl mx-auto flex justify-between items-center">
+        <div class="flex items-center space-x-3">
+          <div class="w-44 h-44 flex items-center justify-center">
+            <img src="assets/images/logo.png" alt="" />
+          </div>
+          <div>
+            <p class="text-xs text-gray-500">Handmade with Love</p>
+          </div>
+        </div>
+        <div class="hidden md:flex space-x-8">
+          <a
+            href="#home"
+            class="text-lg text-green-900 hover:text-pink-600 transition-colors"
+            >Home</a
+          >
+          <a
+            href="#products"
+            class="text-lg text-green-900 hover:text-pink-600 transition-colors"
+            >Products</a
+          >
+          <a
+            href="#about"
+            class="text-lg text-green-900 hover:text-pink-600 transition-colors"
+            >About</a
+          >
+          <a
+            href="#contact"
+            class="text-lg text-green-900 hover:text-pink-600 transition-colors"
+            >Contact</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="px-6 py-20 text-center">
+      <div class="max-w-4xl mx-auto fade-in">
+        <div class="floating mb-8">
+          <div
+            class="w-full h-full mx-auto flex items-center justify-center mb-6"
+          >
+            <img src="assets/images/logo.png" alt="" />
+          </div>
+        </div>
+        <h1
+          class="font-script text-6xl md:text-8xl text-gray-800 mb-4 leading-tight"
+        ></h1>
+        <p
+          class="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed"
+        >
+          Handcrafted keychains, crocheted roses, and beautiful accessories made
+          with love and attention to detail
+        </p>
+        <button
+          onclick="scrollToProducts()"
+          class="bg-green-900 text-white px-8 py-4 rounded-full text-lg font-medium hover:from-pink-600 hover:to-purple-600 transition-all transform hover:scale-105 shadow-lg"
+        >
+          Explore Our Crafts
+        </button>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="px-6 py-20">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="font-script text-5xl text-gray-800 mb-4">
+            Our Handmade Collection
+          </h2>
+          <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+            Each piece is carefully crafted with premium materials and lots of
+            love
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Keychains -->
+          <div
+            class="glass-effect rounded-3xl p-8 product-hover cursor-pointer"
+            onclick="openCustomizer('keychain')"
+          >
+            <div
+              class="w-20 h-20 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl mx-auto mb-6 flex items-center justify-center"
+            >
+              <span class="text-3xl">🗝️</span>
+            </div>
+            <h3 class="font-script text-3xl text-gray-800 mb-4 text-center">
+              Keychains
+            </h3>
+            <p class="text-gray-600 text-center mb-6 leading-relaxed">
+              Custom keychains with personalized designs, names, and colors.
+              Perfect for gifts or personal use.
+            </p>
+            <div class="text-center">
+              <span class="text-2xl font-bold text-pink-600"
+                >Starting at $8</span
+              >
+              <p class="text-sm text-gray-500 mt-1">Customize your design</p>
+            </div>
+          </div>
+
+          <!-- Crochets -->
+          <div
+            class="glass-effect rounded-3xl p-8 product-hover cursor-pointer"
+            onclick="openCustomizer('crochet')"
+          >
+            <div
+              class="w-20 h-20 bg-gradient-to-br from-green-400 to-teal-500 rounded-2xl mx-auto mb-6 flex items-center justify-center"
+            >
+              <span class="text-3xl">🧶</span>
+            </div>
+            <h3 class="font-script text-3xl text-gray-800 mb-4 text-center">
+              Crochet Items
+            </h3>
+            <p class="text-gray-600 text-center mb-6 leading-relaxed">
+              Beautiful crocheted accessories including bags, coasters, and
+              decorative items made with premium yarn.
+            </p>
+            <div class="text-center">
+              <span class="text-2xl font-bold text-pink-600"
+                >Starting at $12</span
+              >
+              <p class="text-sm text-gray-500 mt-1">Choose your style</p>
+            </div>
+          </div>
+
+          <!-- Crocheted Roses -->
+          <div
+            class="glass-effect rounded-3xl p-8 product-hover cursor-pointer"
+            onclick="openCustomizer('roses')"
+          >
+            <div
+              class="w-20 h-20 bg-gradient-to-br from-pink-400 to-rose-500 rounded-2xl mx-auto mb-6 flex items-center justify-center"
+            >
+              <span class="text-3xl">🌹</span>
+            </div>
+            <h3 class="font-script text-3xl text-gray-800 mb-4 text-center">
+              Crocheted Roses
+            </h3>
+            <p class="text-gray-600 text-center mb-6 leading-relaxed">
+              Elegant crocheted roses that last forever. Perfect for bouquets,
+              decorations, or romantic gifts.
+            </p>
+            <div class="text-center">
+              <span class="text-2xl font-bold text-pink-600"
+                >Starting at $15</span
+              >
+              <p class="text-sm text-gray-500 mt-1">Single or bouquets</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="px-6 py-20">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="font-script text-5xl text-gray-800 mb-8">
+          About Charmé Lotus
+        </h2>
+        <div class="glass-effect rounded-3xl p-8 md:p-12">
+          <p class="text-lg text-gray-700 leading-relaxed mb-6">
+            Welcome to Charmé Lotus, where every piece tells a story of passion
+            and craftsmanship. We specialize in creating beautiful, handmade
+            accessories that bring joy and personality to your everyday life.
+          </p>
+          <p class="text-lg text-gray-700 leading-relaxed mb-6">
+            Each keychain, crochet item, and rose is carefully crafted using
+            premium materials and traditional techniques, ensuring that every
+            piece is unique and built to last.
+          </p>
+          <p class="text-lg text-gray-700 leading-relaxed">
+            We believe that handmade items carry a special energy and love that
+            mass-produced products simply cannot match. Thank you for supporting
+            small business and choosing handmade.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="px-6 py-20">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="font-script text-5xl text-gray-800 mb-8">Get in Touch</h2>
+        <div class="glass-effect rounded-3xl p-8 md:p-12">
+          <p class="text-lg text-gray-700 mb-8">
+            Ready to order your custom piece? Send us a message on Instagram
+            with your requirements!
+          </p>
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            class="inline-flex items-center bg-gradient-to-r from-pink-500 to-purple-500 text-white px-8 py-4 rounded-full text-lg font-medium hover:from-pink-600 hover:to-purple-600 transition-all transform hover:scale-105 shadow-lg"
+          >
+            <span class="mr-3">📱</span>
+            Follow us on Instagram
+          </a>
+          <p class="text-sm text-gray-500 mt-4">@charmelotus</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="px-6 py-8 glass-effect mt-20">
+      <div class="max-w-7xl mx-auto text-center">
+        <p class="text-gray-600">
+          &copy; 2025 Charmé Lotus. Made with 💖 for handmade lovers.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Customizer Modal -->
+    <div
+      id="customizerModal"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4"
+    >
+      <div
+        class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+      >
+        <div class="p-8">
+          <div class="flex justify-between items-center mb-6">
+            <h3 id="modalTitle" class="font-script text-3xl text-gray-800">
+              Customize Your Order
+            </h3>
+            <button
+              onclick="closeCustomizer()"
+              class="text-gray-500 hover:text-gray-700 text-2xl"
+            >
+              &times;
+            </button>
+          </div>
+
+          <form id="customizerForm" class="space-y-6">
+            <div>
+              <label class="block text-gray-700 font-medium mb-2"
+                >Your Name</label
+              >
+              <input
+                type="text"
+                id="customerName"
+                class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-pink-500 focus:outline-none"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+
+            <div>
+              <label class="block text-gray-700 font-medium mb-2"
+                >Phone Number</label
+              >
+              <input
+                type="tel"
+                id="phoneNumber"
+                class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-pink-500 focus:outline-none"
+                placeholder="Enter your phone number"
+                required
+              />
+            </div>
+
+            <div id="productOptions">
+              <!-- Dynamic product options will be inserted here -->
+            </div>
+
+            <div>
+              <label class="block text-gray-700 font-medium mb-2"
+                >Special Requests</label
+              >
+              <textarea
+                id="specialRequests"
+                class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-pink-500 focus:outline-none h-24"
+                placeholder="Any special customizations or requests?"
+              ></textarea>
+            </div>
+
+            <div class="flex space-x-4">
+              <button
+                type="button"
+                onclick="generateMessage()"
+                class="flex-1 bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 rounded-xl font-medium hover:from-pink-600 hover:to-purple-600 transition-all"
+              >
+                Generate Order Message
+              </button>
+              <button
+                type="button"
+                onclick="closeCustomizer()"
+                class="px-6 py-3 border border-gray-300 text-gray-700 rounded-xl hover:bg-gray-50 transition-all"
+              >
+                Cancel
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Message Modal -->
+    <div
+      id="messageModal"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4"
+    >
+      <div class="bg-white rounded-3xl max-w-2xl w-full">
+        <div class="p-8">
+          <div class="flex justify-between items-center mb-6">
+            <h3 class="font-script text-3xl text-gray-800">
+              Your Order Message
+            </h3>
+            <button
+              onclick="closeMessageModal()"
+              class="text-gray-500 hover:text-gray-700 text-2xl"
+            >
+              &times;
+            </button>
+          </div>
+
+          <div class="mb-6">
+            <p class="text-gray-600 mb-4">
+              Copy this message and send it to our Instagram DM:
+            </p>
+            <div class="bg-gray-50 p-4 rounded-xl border">
+              <pre
+                id="generatedMessage"
+                class="whitespace-pre-wrap text-sm text-gray-800 font-mono"
+              ></pre>
+            </div>
+          </div>
+
+          <div class="flex space-x-4">
+            <button
+              onclick="copyMessage()"
+              class="flex-1 bg-gradient-to-r from-green-500 to-teal-500 text-white py-3 rounded-xl font-medium hover:from-green-600 hover:to-teal-600 transition-all"
+            >
+              Copy Message
+            </button>
+            <button
+              onclick="openInstagram()"
+              class="flex-1 bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 rounded-xl font-medium hover:from-pink-600 hover:to-purple-600 transition-all"
+            >
+              Open Instagram
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
