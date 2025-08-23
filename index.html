@@ -72,7 +72,7 @@
       <nav class="max-w-7xl mx-auto flex justify-between items-center">
         <div class="flex items-center space-x-3">
           <div
-            class="w-48 h-48 md:w-64 md:h-64 flex ml-15 items-center justify-center"
+            class="w-48 h-48 md:w-55 md:h-55 flex ml-15 items-center justify-center"
           >
             <img src="assets/images/logo.png" alt="" />
             <p class="text-sm text-[rgb(97,73,69)] whitespace-nowrap pr-6">
@@ -106,12 +106,10 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="px-6 py-20 text-center">
+    <section id="home" class="px-6 text-center">
       <div class="max-w-4xl mx-auto fade-in">
-        <div class="floating mb-8">
-          <div
-            class="w-full h-full mx-auto flex items-center justify-center mb-6"
-          >
+        <div class="floating">
+          <div class="w-full h-full mx-auto flex items-center justify-center">
             <img src="assets/images/logo.png" alt="" />
           </div>
         </div>
@@ -121,8 +119,8 @@
         <p
           class="text-lg md:text-2xl text-[rgb(180,161,163)] mb-8 max-w-2xl mx-auto leading-relaxed"
         >
-          Handcrafted keychains, crocheted roses, and beautiful gift & accessories made
-          with love and attention to detail
+          Handcrafted keychains, crocheted roses, and beautiful gift &
+          accessories made with love and attention to detail
         </p>
         <button
           onclick="scrollToProducts()"
@@ -155,7 +153,7 @@
             <div
               class="w-20 h-20 mx-auto mb-6 flex items-center justify-center"
             >
-              <img class="rounded-2xl" src="assets/images/icon3.png"/>
+              <img class="rounded-2xl" src="assets/images/icon3.png" />
             </div>
             <h3
               class="font-script text-3xl text-[rgb(97,73,69)] mb-4 text-center"
@@ -168,23 +166,22 @@
             </p>
             <div class="text-center">
               <span class="text-2xl font-bold text-[rgb(126,123,97)]"
-                >Starting at 15 QR</span
+                >Starting at 20 QR</span
               >
               <p class="text-sm text-[rgb(97,73,69)] mt-1">
-                Customize your design ✨
+                Customize your design 🌸
               </p>
             </div>
           </div>
 
           <!-- Crochets -->
           <div
-            class="glass-effect rounded-3xl p-8 product-hover cursor-pointer"
-            onclick="openCustomizer('crochet')"
+            class="glass-effect rounded-3xl p-8 product-hover cursor-not-allowed"
           >
             <div
               class="w-20 h-20 mx-auto mb-6 flex items-center justify-center"
             >
-              <img class="rounded-2xl" src="assets/images/icon1.jpg"/>
+              <img class="rounded-2xl" src="assets/images/icon1.jpg" />
             </div>
             <h3
               class="font-script text-3xl text-[rgb(97,73,69)] mb-4 text-center"
@@ -197,39 +194,37 @@
             </p>
             <div class="text-center">
               <span class="text-2xl font-bold text-[rgb(126,123,97)]"
-                >Starting at 20 QR</span
+                >COMING SOON !</span
               >
-              <p class="text-sm text-[rgb(97,73,69)] mt-1">
-                Customize your design ✨
-              </p>
+              <p class="text-sm text-[rgb(97,73,69)] mt-1"></p>
             </div>
           </div>
 
-          <!-- Crocheted Roses -->
+          <!-- Crocheted Flowers -->
           <div
             class="glass-effect rounded-3xl p-8 product-hover cursor-pointer"
-            onclick="openCustomizer('roses')"
+            onclick="openCustomizer('flowers')"
           >
             <div
               class="w-20 h-20 mx-auto mb-6 flex items-center justify-center"
             >
-              <img class="rounded-2xl" src="assets/images/icon2.png"/>
+              <img class="rounded-2xl" src="assets/images/icon2.png" />
             </div>
             <h3
               class="font-script text-3xl text-[rgb(97,73,69)] mb-4 text-center"
             >
-              Crocheted Roses
+              Crocheted Flowers
             </h3>
             <p class="text-[rgb(180,161,163)] text-center mb-6 leading-relaxed">
-              Elegant crocheted roses that last forever. Perfect for bouquets,
+              Elegant crocheted flowers that last forever. Perfect for bouquets,
               decorations, or romantic gifts.
             </p>
             <div class="text-center">
               <span class="text-2xl font-bold text-[rgb(126,123,97)]"
-                >Starting at 30 QR</span
+                >Starting at 35 QR</span
               >
               <p class="text-sm text-[rgb(97,73,69)] mt-1">
-                Customize your design ✨
+                Customize your design 🌸
               </p>
             </div>
           </div>
@@ -275,7 +270,7 @@
             with your requirements!
           </p>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/charmeelotus?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
             target="_blank"
             class="inline-flex items-center bg-gradient-to-r from-pink-500 to-purple-500 text-white px-8 py-4 rounded-full text-lg font-medium hover:from-pink-600 hover:to-purple-600 transition-all transform hover:scale-105 shadow-lg"
           >
@@ -302,7 +297,7 @@
       class="fixed inset-0 bg-black/50 hidden z-50 flex overflow-y-auto items-center justify-center p-4"
     >
       <div
-        class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+        class="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
       >
         <div class="p-8">
           <div class="flex justify-between items-center mb-6">
@@ -318,34 +313,47 @@
           </div>
 
           <form id="customizerForm" class="space-y-6">
-            <div>
-              <label class="block text-gray-700 font-medium mb-2"
-                >Your Name</label
-              >
-              <input
-                type="text"
-                id="customerName"
-                class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-pink-500 focus:outline-none"
-                placeholder="Enter your name"
-                required
-              />
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-gray-700 font-medium mb-2"
+                  >Your Name</label
+                >
+                <input
+                  type="text"
+                  id="customerName"
+                  class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-pink-500 focus:outline-none"
+                  placeholder="Enter your name"
+                  required
+                />
+              </div>
+              <div>
+                <label class="block text-gray-700 font-medium mb-2"
+                  >Phone Number (Optional)</label
+                >
+                <input
+                  type="tel"
+                  id="phoneNumber"
+                  class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-pink-500 focus:outline-none"
+                  placeholder="Enter your phone number"
+                />
+              </div>
             </div>
 
+            <!-- Items Container -->
             <div>
-              <label class="block text-gray-700 font-medium mb-2"
-                >Phone Number</label
-              >
-              <input
-                type="tel"
-                id="phoneNumber"
-                class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-pink-500 focus:outline-none"
-                placeholder="Enter your phone number"
-                required
-              />
-            </div>
-
-            <div id="productOptions">
-              <!-- Dynamic product options will be inserted here -->
+              <div class="flex justify-between items-center mb-4">
+                <h4 class="text-lg font-medium text-gray-700">Order Items</h4>
+                <button
+                  type="button"
+                  onclick="addNewItem()"
+                  class="bg-[rgb(180,161,163)] text-white px-4 py-2 rounded-lg hover:bg-[rgb(120,101,103)] transition-colors"
+                >
+                  <i class="fas fa-plus mr-2"></i>Add Another Item
+                </button>
+              </div>
+              <div id="itemsContainer">
+                <!-- Items added dynamically -->
+              </div>
             </div>
 
             <div>
@@ -359,18 +367,29 @@
               ></textarea>
             </div>
 
+            <!-- Total Price Display -->
+            <div class="bg-gray-50 p-4 rounded-xl">
+              <div class="flex justify-between items-center text-lg font-bold">
+                <span class="text-gray-700">Total Price:</span>
+                <span id="totalPrice" class="text-[rgb(126,123,97)] text-2xl">0 QR</span>
+              </div>
+              <p class="text-sm text-gray-500 mt-1">
+                Prices may vary based on complexity
+              </p>
+            </div>
+
             <div class="flex space-x-4">
               <button
                 type="button"
                 onclick="generateMessage()"
-                class="flex-1 bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 rounded-xl font-medium hover:from-pink-600 hover:to-purple-600 transition-all"
+                class="flex-1 text-white py-3 rounded-xl font-medium transition-all bg-[rgb(180,161,163)] hover:bg-[rgb(120,101,103)]"
               >
                 Generate Order Message
               </button>
               <button
                 type="button"
                 onclick="closeCustomizer()"
-                class="px-6 py-3 border border-gray-300 text-gray-700 rounded-xl hover:bg-gray-50 transition-all"
+                class="px-6 py-3 border border-gray-300 text-gray-700 rounded-xl hover:bg-gray-200 transition-all"
               >
                 Cancel
               </button>
@@ -383,7 +402,7 @@
     <!-- Message Modal -->
     <div
       id="messageModal"
-      class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4"
+      class="fixed inset-0 bg-black/50 hidden z-50 flex items-center justify-center p-4"
     >
       <div class="bg-white rounded-3xl max-w-2xl w-full">
         <div class="p-8">
@@ -403,7 +422,9 @@
             <p class="text-gray-600 mb-4">
               Copy this message and send it to our Instagram DM:
             </p>
-            <div class="bg-gray-50 p-4 rounded-xl border">
+            <div
+              class="bg-gray-50 p-4 rounded-xl border max-h-96 overflow-y-auto"
+            >
               <pre
                 id="generatedMessage"
                 class="whitespace-pre-wrap text-sm text-gray-800 font-mono"
@@ -428,6 +449,14 @@
         </div>
       </div>
     </div>
-    <script src="js/main.js"></script>
+
+    <!-- Back to Top Button -->
+    <button
+      id="backToTop"
+      class="opacity-0 pointer-events-none fixed right-6 bottom-6 z-20 rounded-full p-4 text-white shadow-2xl backdrop-blur-xl transition-all duration-500 ease-in-out hover:bg-[rgb(126,123,97)] bg-[rgb(126,123,97,0.6)]"
+    >
+      <i class="fas fa-chevron-up pt-1 pr-1 pl-1 md:text-2xl"></i>
+    </button>
   </body>
+  <script src="js/main.js"></script>
 </html>
