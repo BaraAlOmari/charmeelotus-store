@@ -326,7 +326,7 @@ function copyMessage() {
 }
 
 function openInstagram() {
-    window.open('https://www.instagram.com/direct/t/17849665326235776/', '_blank')
+    window.open('https://ig.me/m/charmeelotus', '_blank')
 }
 
 // Smooth scrolling for navigation
