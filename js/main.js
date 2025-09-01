@@ -7,9 +7,9 @@ const pricing = {
     keychain: {
         base: 20,
         types: {
-            string: 5,
-            metal: 7,
-            phone: 0
+            string: 0,
+            metal: 5,
+            phone: 5
         }
     },
     flowers: {
@@ -71,9 +71,9 @@ function addNewItem() {
                 <div>
                   <label class="block text-gray-700 font-medium mb-2">Keychain Type</label>
                   <select class="keychain-type w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-pink-500 focus:outline-none" onchange="updatePrice()">
-                    <option value="phone">Metal Phone Charm (+0 QR)</option>
-                    <option value="string">String Charm (+5 QR)</option>
-                    <option value="metal">Metal (+7 QR)</option>
+                    <option value="string">String Charm (+0 QR)</option>
+                    <option value="phone">Metal Phone Charm (+5 QR)</option>
+                    <option value="metal">Metal (+5 QR)</option>
                   </select>
                 </div>
                 <div>
@@ -233,7 +233,7 @@ function generateMessage() {
 
     // Get all items first
     const items = document.querySelectorAll('.item-card')
-    
+
     // Validation for keychain colors
     if (currentProduct === 'keychain') {
         for (let item of items) {
